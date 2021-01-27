@@ -4,7 +4,7 @@
 使用说明：
 
 
-var wxWorkConfiguration = configuration.GetSection(ConfigurationConsts.WxWorkProviderKey)
+          var wxWorkConfiguration = configuration.GetSection(ConfigurationConsts.WxWorkProviderKey)
                 .Get<WxWorkConfiguration>();
             if (wxWorkConfiguration.SilentAuthorizationEnable)
             {
@@ -18,7 +18,6 @@ var wxWorkConfiguration = configuration.GetSection(ConfigurationConsts.WxWorkPro
                         options.SaveTokens = true;
                         options.SilentAuthorizationEnable = true;
                         options.CallbackPath=new PathString("/signin-wxwork-silentLogin");
-
                         options.ClaimActions.MapJsonKey(ClaimTypes.Email, "email");
                         options.ClaimActions.MapJsonKey(ClaimTypes.MobilePhone, "mobile");
                     });
